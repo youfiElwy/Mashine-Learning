@@ -1,51 +1,17 @@
-# Cat and Dog Image Classification Using CLIP Embeddings
+# Machine Learning Projects Overview
 
-## Project Overview
+## Project 1: Used Car Price Prediction
 
-This project leverages the power of CLIP (Contrastive Language-Image Pre-Training) embeddings for image classification. The objective is to build a system that can accurately differentiate between images of cats and dogs using CLIP embeddings as features and the Fisher algorithm for classification.
+This project focuses on predicting the selling price of used cars by implementing linear and polynomial regression techniques. The dataset includes various attributes of used cars, such as manufacturing year, kilometers driven, and more. The project involves:
+- Implementing linear regression using Multi-Feature Equation and Gradient Descent.
+- Implementing polynomial regression models with degrees ranging from 1 to 10.
+- Evaluating models using RMSE, MSE, and MAE metrics.
 
-## Dataset and CLIP Embedding Extraction
+## Project 2: Cat and Dog Image Classification Using CLIP Embeddings
 
-### Steps:
-1. **Data Splitting:**
-   - Split the dataset into training and testing sets with 20% of the data reserved for testing.
-
-2. **CLIP Installation and Setup:**
-   - Install the CLIP repository from GitHub as a Python package along with any additional dependencies.
-   - Load the CLIP model using a deep learning framework like PyTorch (use `clip.load()` method).
-
-3. **Embedding Extraction:**
-   - Use the CLIP model to extract embeddings for each image in the dataset (both train and test sets).
-   - Pass each image through the CLIP model to retrieve its embedding vector using the `model.encode_image(image: Tensor)` method.
-   - Organize the extracted CLIP embeddings into a feature matrix.
-
-## Fisher Algorithm
-
-### Implementation:
-1. **Training:**
-   - Implement the Fisher algorithm using the training set’s CLIP embeddings as features and associated labels.
-   - Use the following equation for Fisher’s Linear Discriminant: \( w = C \cdot S^{-1} \cdot (m_2 - m_1) \), where \( C=0.1 \).
-
-2. **Testing and Visualization:**
-   - Test the model using the testing dataset.
-   - Visualize the classification results using a confusion matrix to gain insights into the model’s behavior.
-
-## Model Evaluation
-
-### Metrics:
-- Calculate accuracy, precision, recall, and F1-score to assess the model’s performance.
-- Visualize the classification results using a confusion matrix.
-
-## Bonus Task
-
-### Experimentation:
-- Alter Fisher’s Linear Discriminant equation and try three different C values.
-- Determine the best C value for the model.
-
-## Deliverables
-
-1. **Python Code:**
-   - Well-commented and organized Python code implementing the entire workflow.
-
-2. **Report:**
-   - Explanation of each step, method, results, and model performance insights, including visualizations (e.g., Confusion Matrix).
+This project aims to classify images of cats and dogs using CLIP (Contrastive Language-Image Pre-Training) embeddings and the Fisher algorithm. The workflow includes:
+- Extracting CLIP embeddings for images in the dataset.
+- Implementing the Fisher algorithm for classification.
+- Evaluating the model using metrics like accuracy, precision, recall, and F1-score.
+- Visualizing results with a confusion matrix.
+- Experimenting with different values of C in the Fisher algorithm.
